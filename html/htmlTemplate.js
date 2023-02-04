@@ -48,3 +48,38 @@ const internCard = (name, id, email, school) => {
     </section>
     `
 }
+
+//if statement to determine what card 
+function chooseCard (employee) {
+    if (employee === 'Manager') {
+      return managerCard
+    }else if (employee === 'Engineer') {
+      return engineerCard
+    }else if (employee === 'Intern') {
+      return internCard
+    }
+  }; 
+
+//export funciton to generate HTML
+const generateHTML = (card) =>
+  `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>myTeamDirectory</title>
+</head>
+
+
+<body>
+    <header>
+    <h1>My Devloper Team</h1>
+    </header>
+
+    <main>
+        <div>
+        ${chooseCard}
+        </div>
+    </main>   
+ </body>
+</html>`;
