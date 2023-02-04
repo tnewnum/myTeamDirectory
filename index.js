@@ -1,17 +1,17 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Manager = require('./classes/manager')
-const Engineer = require('./classes/engineer')
-const Intern = require('./classes/intern')
+const Manager = require('./classes/manager.js')
+const Engineer = require('./classes/engineer.js')
+const Intern = require('./classes/intern.js')
 
 
 //function that runs through an if statement checking user input to select the correct employee 
-function chooseEmployee (employee) {
-  if (employee === 'Manager') {
+let chooseEmployee = function(answers) {
+  if (answers === 'Manager') {
     return managerQuest
-  }else if (employee === 'Engineer') {
+  }else if (answers === 'Engineer') {
     return engineerQuest
-  }else if (employee === 'Intern') {
+  }else if (answers === 'Intern') {
     return internQuest
   }
 }; 
@@ -26,11 +26,13 @@ function init() {
       message: 'What Employee would you like to include?',
       name: 'employee',
       choices: ['Manager', 'Engineer', 'Intern'],
-    },
-    
+    },       
   ])
   
   .then((answers) => {
+
+    chooseEmployee()
+
     const htmlPageContent = generateHTML(answers);
     
     fs.writeFile('index.html', htmlPageContent, (err) =>

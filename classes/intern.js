@@ -1,3 +1,5 @@
+inquirer = require('inquirer')
+
 //intern - name, employee id, eamil, school
 class Intern {
     constructor(name, id, email, school) {
@@ -8,7 +10,8 @@ class Intern {
     }
 }
 
-const internQuest = [
+const internQuest = function () {
+  return inquirer.prompt([
     {
       type: 'input',
       name: 'name',
@@ -30,4 +33,5 @@ const internQuest = [
       message: `What is the intern's School?`,
     },
     
-];
+  ])
+};

@@ -1,3 +1,5 @@
+inquirer = require('inquirer')
+
 //manager - name, emoloyee id, email address, office number 
 class Manager {
     constructor(name, id, email, office) {
@@ -8,7 +10,8 @@ class Manager {
     }
 }
 
-const managerQuest = [
+const managerQuest = function () {
+  return inquirer.prompt([
     {
       type: 'input',
       name: 'name',
@@ -26,8 +29,9 @@ const managerQuest = [
     },
     {
       type: 'input',
-      name: 'github',
+      name: 'office',
       message: `What is the Manager's office number?`,
     },
+  ])
+};
     
-];

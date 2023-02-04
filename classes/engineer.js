@@ -1,3 +1,5 @@
+inquirer = require('inquirer')
+
 //engineer- name, employee id, email, github username
 class Engineer {
     constructor(name, id, email, github) {
@@ -8,7 +10,8 @@ class Engineer {
     }
 }
 
-const engineerQuest = [
+const engineerQuest = function() {
+  return inquirer.prompt ([    
     {
       type: 'input',
       name: 'name',
@@ -30,4 +33,5 @@ const engineerQuest = [
       message: `What is the engineer's Github username?`,
     },
     
-];
+  ])
+};
