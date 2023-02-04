@@ -1,8 +1,25 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Manager = require('./classes/manager')
+const Engineer = require('./classes/engineer')
+const Intern = require('./classes/intern')
 
 
-const generateHTML = ({ name, location, github, linkedin }) =>
+//function that runs through an if statement checking user input to select the correct employee 
+function chooseEmployee (employee) {
+  if (employee === 'Manager') {
+    return managerQuest
+  }else if (employee === 'Engineer') {
+    return engineerQuest
+  }else if (employee === 'Intern') {
+    return internQuest
+  }
+}; 
+
+
+
+
+const generateHTML = ({ name, id, email, officeNumber, github, school }) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +32,7 @@ const generateHTML = ({ name, location, github, linkedin }) =>
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Hi! My name is ${name}</h1>
-    <p class="lead">I am from ${location}.</p>
+    <p class="lead">My office  ${location}.</p>
     <h3 <span class="badge badge-secondary">Contact Me</span></h3>
     <ul class="list-group">
       <li class="list-group-item">My GitHub username is ${github}</li>
@@ -26,43 +43,24 @@ const generateHTML = ({ name, location, github, linkedin }) =>
 </body>
 </html>`;
 
-inquirer
-  .prompt([
+function init() {
+  inquirer
+  .prompt ([
     {
-      type: 'input',
-      name: 'name',
-      message: 'What is your name?',
+      type: "list",
+      message: 'What Employee would you like to include?',
+      name: 'employee',
+      choices: ['Manager', 'Engineer', 'Intern'],
     },
-    {
-      type: 'input',
-      name: 'location',
-      message: 'Where are you from?',
-    },
-    {
-      type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
-    },
-    {
-      type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
-    },
-    {
-      type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
-    },
-    {
-      type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
-    },
+    
   ])
+  
   .then((answers) => {
     const htmlPageContent = generateHTML(answers);
-
+    
     fs.writeFile('index.html', htmlPageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!')
+    err ? console.log(err) : console.log('Successfully created index.html!')
     );
   });
+}
+init()
