@@ -1,4 +1,4 @@
-const managerCard = (name, id, email, officeNumber) => {
+ const managerCard = (name, id, email, officeNumber) => {
 
     return ` 
     <section>
@@ -50,24 +50,34 @@ const internCard = (name, id, email, school) => {
 }
 
 //if statement to determine what card 
-function chooseCard (employee) {
+function generateCards (myTeam) {
+
+  let allCards = ''
+  for (let index = 0; index < myTeam.length; index++) {
+    const element = array[index];
+
+   
+    
+  }
     if (employee === 'Manager') {
-      return managerCard
-    }else if (employee === 'Engineer') {
-      return engineerCard
-    }else if (employee === 'Intern') {
+      return myTeam.officeNumber
+    } if (employee === 'Engineer') {
+     return engineerCard
+    } if (employee === 'Intern') {
       return internCard
     }
   }; 
 
+
 //export funciton to generate HTML
-const generateHTML = (card) =>
+const generateHTML = (myTeam) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>myTeamDirectory</title>
+  
 </head>
 
 
@@ -78,8 +88,10 @@ const generateHTML = (card) =>
 
     <main>
         <div>
-        ${chooseCard}
+        ${managerCard(myTeam[0].name, myTeam[0].id, myTeam[0].email, myTeam[0].officeNum)}
         </div>
     </main>   
  </body>
 </html>`;
+
+module.exports = generateHTML;

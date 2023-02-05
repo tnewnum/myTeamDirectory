@@ -1,99 +1,24 @@
 //requiring other files to be used 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Employee = require('./classes/employee.js');
 const Manager = require('./classes/manager.js');
 const Engineer = require('./classes/engineer.js');
 const Intern = require('./classes/intern.js');
+const generateHTML = require('./html/htmlTemplate.js')
+
+//imports questions from questions.js
+// import { managerQuest, nextEmplQuest, engineerQuest, internQuest } from './classes/questions.js';
+
+const allQuestions = require('./classes/questions.js')
+const {managerQuest, nextEmplQuest, engineerQuest, internQuest} = allQuestions
 
 //setting up an empty array to push my team to, to be used later 
 const myTeam = [];
 
-//questions for the Manager 
-const managerQuest = [
-  {
-    type: 'input',
-    name: 'name',
-    message: `What is the Manager's name?`,
-  },
-  {
-    type: 'input',
-    name: 'id',
-    message: `What is the Manager's employee id?`,
-  },
-  {
-    type: 'input',
-    name: 'email',
-    message: `What is the Manager's email?`,
-  },
-  {
-    type: 'input',
-    name: 'office',
-    message: `What is the Manager's office number?`,
-  },
-];
-
-//a questiont to see what the next employee should be or if finished with team
-const nextEmplQuest = [
-  {
-    type: 'list',
-    name: 'menu',
-    message: 'Would you like to add another employee?',
-    choices: ['Engineer', 'Intern', 'Finished Building Team']  
-  }
-]
-
-//questions for the Engineer 
-const engineerQuest = [    
-  {
-    type: 'input',
-    name: 'name',
-    message: `What is the engineer's name?`,
-  },
-  {
-    type: 'input',
-    name: 'id',
-    message: `What is the engineer's employee id?`,
-  },
-  {
-    type: 'input',
-    name: 'email',
-    message: `What is the engineer's email?`,
-  },
-  {
-    type: 'input',
-    name: 'github',
-    message: `What is the engineer's Github username?`,
-  },    
-];
-
-//questions for the intern 
-const internQuest = [
-  {
-    type: 'input',
-    name: 'name',
-    message: `What is the intern's name?`,
-  },
-  {
-    type: 'input',
-    name: 'id',
-    message: `What is the intern's employee id?`,
-  },
-  {
-    type: 'input',
-    name: 'email',
-    message: `What is the intern's email?`,
-  },
-  {
-    type: 'input',
-    name: 'school',
-    message: `What is the intern's School?`,
-  },  
-];
-
 //the 3 functions below gather the "answers" from the questions (per position) and pushes them to myTeam array
 function createManager(answers) {
-  const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNum)
+  const manager = new Manager(answers.name, answers.id, answers.email, answers.office)
+  console.log(manager)
   myTeam.push(manager);
 }
 
@@ -139,6 +64,7 @@ function nextQuestion() {
     } else if (result.menu === 'Finished Building Team') {
       console.log('Team Directory Finished!')
 
+      console.log(myTeam)
       const htmlPageContent = generateHTML(myTeam)
       
       fs.writeFile('newIndex.html', htmlPageContent, (err) =>
