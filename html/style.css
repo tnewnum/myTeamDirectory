@@ -1,3 +1,7 @@
+* {
+    background-color: lightslategray;
+}
+
 .header {
     display: flex;
     justify-content: center;
@@ -7,3 +11,25 @@
     background-color: rebeccapurple;
     
 }
+
+.title {
+   
+    background-color: rebeccapurple;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    color: black;
+    background-color: rebeccapurple;
+    color: black;
+    
+}
+
+.test {
+    background-color: rebeccapurple;
+    color: black;
+}
+
