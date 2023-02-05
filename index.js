@@ -1,20 +1,90 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Manager = require('./classes/manager.js')
-const Engineer = require('./classes/engineer.js')
-const Intern = require('./classes/intern.js')
+const Employee = require('./classes/employee.js');
+const Manager = require('./classes/manager.js');
+const Engineer = require('./classes/engineer.js');
+const Intern = require('./classes/intern.js');
 
+const myTeam = [];
 
-//function that runs through an if statement checking user input to select the correct employee 
-let chooseEmployee = function(answers) {
-  if (answers === 'Manager') {
-    return managerQuest
-  }else if (answers === 'Engineer') {
-    return engineerQuest
-  }else if (answers === 'Intern') {
-    return internQuest
+const managerQuest = [
+  {
+    type: 'input',
+    name: 'name',
+    message: `What is the Manager's name?`,
+  },
+  {
+    type: 'input',
+    name: 'id',
+    message: `What is the Manager's employee id?`,
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: `What is the Manager's email?`,
+  },
+  {
+    type: 'input',
+    name: 'office',
+    message: `What is the Manager's office number?`,
+  },
+];
+
+const nextEmplQuest = [
+  {
+    type: 'list',
+    name: 'menu',
+    message: 'Would you like to add another employee?',
+    choices: ['Engineer', 'Intern', 'Finished Building Team']  
   }
-}; 
+]
+
+const engineerQuest = [    
+  {
+    type: 'input',
+    name: 'name',
+    message: `What is the engineer's name?`,
+  },
+  {
+    type: 'input',
+    name: 'id',
+    message: `What is the engineer's employee id?`,
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: `What is the engineer's email?`,
+  },
+  {
+    type: 'input',
+    name: 'github',
+    message: `What is the engineer's Github username?`,
+  },    
+];
+
+const internQuest = [
+  {
+    type: 'input',
+    name: 'name',
+    message: `What is the intern's name?`,
+  },
+  {
+    type: 'input',
+    name: 'id',
+    message: `What is the intern's employee id?`,
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: `What is the intern's email?`,
+  },
+  {
+    type: 'input',
+    name: 'school',
+    message: `What is the intern's School?`,
+  },  
+];
+
 
 
 

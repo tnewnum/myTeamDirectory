@@ -1,37 +1,15 @@
-inquirer = require('inquirer')
+const Employee = require('./employee.js')
 
 //intern - name, employee id, eamil, school
-class Intern {
+class Intern extends Employee {
     constructor(name, id, email, school) {
-        this.name = name
-        this.id = id
-        this.email = email
+       super(name, id, email)
         this.school = school
+    }
+
+    getRole() {
+      return "Intern"
     }
 }
 
-const internQuest = function () {
-  return inquirer.prompt([
-    {
-      type: 'input',
-      name: 'name',
-      message: `What is the intern's name?`,
-    },
-    {
-      type: 'input',
-      name: 'id',
-      message: `What is the intern's employee id?`,
-    },
-    {
-      type: 'input',
-      name: 'email',
-      message: `What is the intern's email?`,
-    },
-    {
-      type: 'input',
-      name: 'school',
-      message: `What is the intern's School?`,
-    },
-    
-  ])
-};
+module.exports = Intern;
