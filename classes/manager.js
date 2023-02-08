@@ -1,3 +1,5 @@
+//requires employee class and then extends it to include office number 
+
 const Employee = require('./employee.js')
 
 class Manager extends Employee {

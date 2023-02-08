@@ -1,3 +1,5 @@
+//requires employee class then we extend it to include school
+
 const Employee = require('./employee.js')
 
 class Intern extends Employee {
