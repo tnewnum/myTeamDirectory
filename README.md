@@ -17,6 +17,8 @@ A webpage that displays my team 's basic information - that is populated from th
 Requires the use of the Inquirer package, ensure that you install and use Inquirer version 8.2.4. To do so, use the following command in your project folder: npm i inquirer@8.2.4.
 
 ## Usage
+Check out this Video to see how it works! 
+https://drive.google.com/file/d/1BC6PAimjssGiIwZekRaV63IhCCZ-epaO/view?usp=sharing
 
 In the Terminal run - node index.js - it will prompt you through a list of questions to populate the infomation required for the webpage. Once complete an index.html will  populate in the current directory and  can be deployed from there.
 
