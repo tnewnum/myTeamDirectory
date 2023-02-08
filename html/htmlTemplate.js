@@ -3,15 +3,13 @@ const managerCard = (name, id, email, officeNumber) => {
 
   return ` 
   <section>
-    <div class = "container">
       <div class = "manager">
-        <h4>Manager</h4>
+        <h3>Manager</h3>
         <h5 class="name">${name}</h5>
         <h6 class="id">Employee ID: ${id}</h6>
         <h6 class="email">Email: <a href="mailto:${email}">${email}</a></h6>
         <h6 class="office">Office Number: ${officeNumber}</h6>        
-      </div>
-    </div>
+      </div>    
   </section>
     `
 }
@@ -21,16 +19,13 @@ const engineerCard = (name, id, email, github) => {
 
   return ` 
   <section>
-    <div class = "container">
       <div class = "engineer">
-        <h4>Engineer</h4>
+        <h3>Engineer</h3>
         <h5 class="name">${name}</h5>
         <h6 class="id">Employee ID: ${id}</h6>
         <h6 class="email">Email: <a href="mailto:${email}">${email}</a></h6>
-        <h6 class="handle">GitHub username @${github}</h6>
-        <h6 class="Github">GitHub Webpage: <a href="https://github.com/${github}">${github}</a></h6>        
+        <h6 class="Github">GitHub @ <a href="https://github.com/${github}">${github}</a></h6>        
       </div>
-    </div>
   </section>
     `
 }
@@ -40,15 +35,13 @@ const internCard = (name, id, email, school) => {
 
   return ` 
   <section>
-    <div class = "container">
       <div class = "intern">
-        <h4>Intern</h4>
+        <h3>Intern</h3>
         <h5 class="name">${name}</h5>
         <h6 class="id">Employee ID: ${id}</h6>
         <h6 class="email">Email: <a href="mailto:${email}">${email}</a></h6>
         <h6 class="office">I attended school at: ${school}</h6>        
       </div>
-    </div>
   </section>
     `
 }
@@ -92,7 +85,7 @@ const generateHTML = (myTeam) =>
 
   <main class="main">
 
-    <div>
+    <div class="container">
     ${generateCards(myTeam)}
     </div>
 
@@ -100,7 +93,7 @@ const generateHTML = (myTeam) =>
 </body>
 
 <footer class="footer">
-<h6 class="footer">Devloped by Tommy Newnum find me on GitHub: <a class="test" href="https://github.com/tnewnum"> @tnewnum</a></h6>
+<h6 class="footer">Devloped by Tommy Newnum find me on GitHub: <a class="gitFoot" href="https://github.com/tnewnum"> @tnewnum</a></h6>
 </footer>
 
 </html>`;

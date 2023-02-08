@@ -1,14 +1,21 @@
 * {
-    background-color: lightslategray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body {
+    background-color: lightslategray ;
 }
 
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 100%;
     color: black;
     background-color: rebeccapurple;
+    left: 0;
+    width: 100%;
+    margin-top: -11px;
     
 }
 
@@ -17,18 +24,50 @@
     background-color: rebeccapurple;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 2.5%;
+
+}
+
+.manager {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    border: 4mm ridge rgba(211, 220, 50, .6);
+    margin: 5%;
+}
+
+.engineer {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    border: 4mm ridge rgba(211, 220, 50, .6);
+    margin: 5%;
+}
+
+.intern {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    border: 5mm ridge rgba(211, 220, 50, .6);
+    margin: 5%;
+}
+
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75px;
     color: black;
     background-color: rebeccapurple;
-    color: black;
-    
+    margin-top: 2%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: -8px;
+    margin-left: -4px;
+    margin-right: -10px;
 }
 
-.test {
+.gitFoot {
     background-color: rebeccapurple;
     color: black;
 }
