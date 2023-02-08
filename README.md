@@ -33,6 +33,8 @@ More than likely I will get some help on this project from my man Nicholas Herma
 
 ##Test
 
+Test are established in the test folder, and can be found for each Class. To run a test, npm run test on your command line. 
+
 ##Questions
 
 Github Username: @tnewnum
