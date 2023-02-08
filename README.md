@@ -20,9 +20,12 @@ Requires the use of the Inquirer package, ensure that you install and use Inquir
 
 In the Terminal run - node index.js - it will prompt you through a list of questions to populate the infomation required for the webpage. Once complete an index.html will  populate in the current directory and  can be deployed from there.
 
+![image](https://user-images.githubusercontent.com/117390778/217568197-2736cc3d-fc8a-440f-b1b7-ff6fe3ba0444.png)
+
+
 ## License
 
-This project is not coverd nder a License.
+This project is not coverd under a License.
 
 ## Credits
 

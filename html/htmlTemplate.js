@@ -40,7 +40,7 @@ const internCard = (name, id, email, school) => {
         <h5 class="name">${name}</h5>
         <h6 class="id">Employee ID: ${id}</h6>
         <h6 class="email">Email: <a href="mailto:${email}">${email}</a></h6>
-        <h6 class="office">I attended school at: ${school}</h6>        
+        <h6 class="office">School Attended: ${school}</h6>        
       </div>
   </section>
     `
