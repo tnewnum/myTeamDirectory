@@ -1,43 +1,45 @@
 # myTeamDirectory
 
 
-## Description
+## 📘 Description
 
-A webpage that displays my team 's basic information - that is populated from the terminal
+A webpage that displays my team 's basic information - that is populated from the terminal - using Inquirer
 
-## Table of Contents
+## 📑 Table of Contents 
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Credits](#credits)
 
-## Installation
+## 🛠️ Installation 
 
 Requires the use of the Inquirer package, ensure that you install and use Inquirer version 8.2.4. To do so, use the following command in your project folder: npm i inquirer@8.2.4.
 
 ## Usage
-Check out this Video to see how it works! 
-https://drive.google.com/file/d/1BC6PAimjssGiIwZekRaV63IhCCZ-epaO/view?usp=sharing
+
+Check out this Video to see how it works! https://drive.google.com/file/d/1BC6PAimjssGiIwZekRaV63IhCCZ-epaO/view?usp=sharing
 
 In the Terminal run - node index.js - it will prompt you through a list of questions to populate the infomation required for the webpage. Once complete an index.html will  populate in the current directory and  can be deployed from there.
 
 ![image](https://user-images.githubusercontent.com/117390778/217568197-2736cc3d-fc8a-440f-b1b7-ff6fe3ba0444.png)
 
 
-## License
+## 🔒 License
 
-This project is not coverd under a License.
+This project is not covered under a License.
 
-## Credits
+## 🤝 Credits
 
-More than likely I will get some help on this project from my man Nicholas Herman https://github.com/nwherman1724
+Nicholas Herman https://github.com/nwherman1724
 
-##Test
+## ⚡ Test
 
-Test are established in the test folder, and can be found for each Class. To run launch your terminal and use "npm run test" on your command line. 
+Test are established in the test folder, and can be found for each Class. To run launch your terminal and use "npm run test" on your command line.
 
-##Questions
+## ❓ Questions
+
+If you have any questions - use the links below to reach out!
 
 Github Username: @tnewnum
 
