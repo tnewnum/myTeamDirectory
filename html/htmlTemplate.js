@@ -80,7 +80,7 @@ const generateHTML = (myTeam) =>
 
 <body class="body">
   <header class ="header">
-    <h1 class="title">My Devloper Team</h1>
+    <h1 class="title">myTeamDirectory</h1>
   </header>
 
   <main class="main">
