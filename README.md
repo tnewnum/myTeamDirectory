@@ -22,7 +22,7 @@ Check out this Video to see how it works! https://drive.google.com/file/d/1BC6PA
 
 In the Terminal run - node index.js - it will prompt you through a list of questions to populate the infomation required for the webpage. Once complete an index.html will  populate in the current directory and  can be deployed from there.
 
-![image](https://user-images.githubusercontent.com/117390778/217568197-2736cc3d-fc8a-440f-b1b7-ff6fe3ba0444.png)
+![image](https://user-images.githubusercontent.com/117390778/222581764-acc7c2b6-4938-423e-b5f2-46e4979959c6.png)
 
 
 ## 🔒 License
